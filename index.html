@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Design | Digital Art Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a digital artist specializing in concept art, vector illustrations, and digital paintings.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#00f3ff',
+                        'neon-pink': '#ff00ff',
+                        'neon-purple': '#bc13fe',
+                        'dark-bg': '#0a0a0a',
+                        'card-bg': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(188, 19, 254, 0.5)' },
+                            '50%': { opacity: '0.5', boxShadow: '0 0 40px rgba(188, 19, 254, 0.2)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #00f3ff, #bc13fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-pink {
+            background: linear-gradient(to right, #ff00ff, #fece13);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden selection:bg-neon-purple selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-card bg-opacity-80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html"
+                        class="font-display text-3xl font-bold text-gradient tracking-tighter">PIXEL<span
+                            class="text-white">DESIGN</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Home</a>
+                        <a href="gallery.html"
+                            class="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Gallery</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
+                        <a href="contact.html"
+                            class="bg-gradient-to-r from-neon-purple to-neon-blue text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-transform transform hover:scale-105">Contact
+                            Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+            <div
+                class="absolute top-20 left-20 w-72 h-72 bg-neon-purple rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float">
+            </div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-neon-blue rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="font-display text-6xl md:text-8xl font-bold mb-6 leading-tight">
+                Bringing <span class="text-gradient">Imagination</span><br>to Life
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">
+                Specializing in Concept Art, Vector Illustrations, and Digital Painting.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="gallery.html"
+                    class="group relative px-8 py-4 bg-transparent overflow-hidden rounded-full border border-neon-blue text-white shadow-2xl transition-all hover:shadow-neon-blue/50">
+                    <div
+                        class="absolute inset-0 w-0 bg-neon-blue transition-all duration-[250ms] ease-out group-hover:w-full opacity-20">
+                    </div>
+                    <span class="relative font-bold">View Portfolio</span>
+                </a>
+                <a href="#featured"
+                    class="px-8 py-4 rounded-full glass-card hover:bg-white/10 transition-all font-semibold">
+                    Featured Works
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section id="featured" class="py-24 bg-black/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">My <span
+                        class="text-gradient-pink">Creative Worlds</span></h2>
+                <div class="h-1 w-24 bg-neon-purple mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Concept Art Card -->
+                <div
+                    class="group relative h-96 rounded-2xl overflow-hidden glass-card cursor-pointer transition-transform hover:-translate-y-2">
+                    <img src="https://loremflickr.com/800/600/cyberpunk,city" alt="Concept Art"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-90">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3
+                            class="font-display text-3xl font-bold mb-2 text-white group-hover:text-neon-blue transition-colors">
+                            Concept Art</h3>
+                        <p
+                            class="text-gray-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            Immersive environments and character designs.</p>
+                    </div>
+                </div>
+
+                <!-- Vector Art Card -->
+                <div
+                    class="group relative h-96 rounded-2xl overflow-hidden glass-card cursor-pointer transition-transform hover:-translate-y-2">
+                    <img src="https://loremflickr.com/800/600/vector,illustration" alt="Vector Art"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-90">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3
+                            class="font-display text-3xl font-bold mb-2 text-white group-hover:text-neon-pink transition-colors">
+                            Vector Style</h3>
+                        <p
+                            class="text-gray-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            Clean lines, bold colors, and scalable designs.</p>
+                    </div>
+                </div>
+
+                <!-- Digital Painting Card -->
+                <div
+                    class="group relative h-96 rounded-2xl overflow-hidden glass-card cursor-pointer transition-transform hover:-translate-y-2">
+                    <img src="https://loremflickr.com/800/600/abstract,painting" alt="Digital Painting"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-90">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3
+                            class="font-display text-3xl font-bold mb-2 text-white group-hover:text-neon-purple transition-colors">
+                            Digital Painting</h3>
+                        <p
+                            class="text-gray-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            Expressive strokes and rich textures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <span class="font-display text-2xl font-bold text-white">PIXEL<span
+                        class="text-neon-blue">DESIGN</span></span>
+                <p class="text-gray-500 mt-2 text-sm">© 2024 All Rights Reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">ArtStation</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Dribbble</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

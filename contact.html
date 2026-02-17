@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pixel Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#00f3ff',
+                        'neon-pink': '#ff00ff',
+                        'neon-purple': '#bc13fe',
+                        'dark-bg': '#0a0a0a',
+                        'card-bg': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #00f3ff, #bc13fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-neon-purple selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-card bg-opacity-80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html"
+                        class="font-display text-3xl font-bold text-gradient tracking-tighter">PIXEL<span
+                            class="text-white">DESIGN</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Home</a>
+                        <a href="gallery.html"
+                            class="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Gallery</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
+                        <a href="contact.html"
+                            class="text-white hover:text-neon-blue px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Contact
+                            Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <section class="flex-grow flex items-center justify-center px-4 pt-24 pb-12">
+        <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- Contact Info -->
+            <div>
+                <h1 class="font-display text-4xl md:text-5xl font-bold mb-6">Let's <span
+                        class="text-gradient">Create</span> Together</h1>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Have a project in mind? Looking for a unique digital art piece?
+                    Fill out the form or reach out directly.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-neon-blue/10 flex items-center justify-center text-neon-blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400">Email</p>
+                            <p class="font-semibold text-white">hello@pixeldesign.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                    <input type="text"
+                        class="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors"
+                        placeholder="Your name">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                    <input type="email"
+                        class="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors"
+                        placeholder="your@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                    <textarea rows="4"
+                        class="w-full bg-black/40 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition-colors"
+                        placeholder="Tell me about your project..."></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-gradient-to-r from-neon-blue to-neon-purple text-white font-bold py-3 rounded-lg hover:opacity-90 transition-transform transform hover:scale-[1.02]">
+                    Send Message
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
