@@ -1,4 +1,4 @@
-# Pixel Design Portfolio
+# shashin jayawardhna 
 
 This is a complete, multi-page portfolio website for a digital artist.
 
